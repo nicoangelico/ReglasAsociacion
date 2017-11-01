@@ -1,5 +1,6 @@
 # Reglas de Asociacion
-Aplicación académica de Reglas de Asociación (UTN FRRe). Este módulo fue desarrollado para uso académico por parte del área de investigación de Inteligencia Artificial de la UTN.
+Aplicación académica de Reglas de Asociación (UTN FRRe).
+
 
 Consulte wikipedia para saber que es y como funciona esta tecnica de inteligencia artifical.
 https://es.wikipedia.org/wiki/Reglas_de_asociaci%C3%B3n
