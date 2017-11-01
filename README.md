@@ -1,10 +1,10 @@
-# ReglasAsociacion
-Aplicación académica de Reglas de Asociación (UTN FRRe). Este modulo fue desarrollado para uso academico por parte del area de investigacion de Inteligencia Artificial de la UTN.
+# Reglas de Asociacion
+Aplicación académica de Reglas de Asociación (UTN FRRe). Este módulo fue desarrollado para uso académico por parte del área de investigación de Inteligencia Artificial de la UTN.
 
-Consulete wikipedia para saber que es y como funciona esta tecnica de inteligencia artifical.
+Consulte wikipedia para saber que es y como funciona esta tecnica de inteligencia artifical.
 https://es.wikipedia.org/wiki/Reglas_de_asociaci%C3%B3n
 
-# La aplicacion
+# La aplicación
 Para correr el algoritmo se requiere un **Soporte mínimo**, una **Confianza mínima** y un conjunto de transacciones. En este ejemplo colocamos el soporte en 0.3 y la confianza en 0.7 y a continuación ingresamos las siguientes transacciones:
 
 B,I,M;
