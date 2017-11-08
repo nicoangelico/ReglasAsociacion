@@ -1,78 +1,57 @@
-# Reglas de Asociacion
-Aplicación académica de Reglas de Asociación (UTN FRRe).
+# Reglas de Asociacion / Association rule learning
+En minería de datos y aprendizaje automático, las reglas de asociación se utilizan para descubrir hechos que ocurren en común dentro de un determinado conjunto de datos.
 
-
-Consulte wikipedia para saber que es y como funciona esta tecnica de inteligencia artifical.
+Para mayor informacion consulte wikipedia.
 https://es.wikipedia.org/wiki/Reglas_de_asociaci%C3%B3n
 
 # La aplicación
-Para correr el algoritmo se requiere un **Soporte mínimo**, una **Confianza mínima** y un conjunto de transacciones. En este ejemplo colocamos el soporte en 0.3 y la confianza en 0.7 y a continuación ingresamos las siguientes transacciones:
+Para correr el algoritmo se requiere un **Soporte mínimo**, una **Confianza mínima** y un conjunto de transacciones. En este ejemplo colocamos el soporte en 0.3 y la confianza en 0.8 y a continuación ingresamos las siguientes transacciones:
 
-B,I,M;
+Beef,Chicken,Milk;
 
-B,C;
+Beef,Cheese;
 
-C,O;
+Cheese,Boots;
 
-B,I,C,O;
+Beef,Chicken,Cheese;
 
-B,I,L,C,M;
+Beef,Chicken,Clothes,Cheese,Milk;
 
-I,L,M;
+Chicken,Clothes,Milk;
 
-I,M,L;
-
-C,M,I,L,O;
-
-M,L,B;
-
-B,O,M;
-
+Chicken,Milk,Clothes;
 
 # Resultados
 Corremos el aplicativo y nos devuelve el siguiente resultado:
 
-[C]->[B] confianza: 0.6    Descarto
+[Cheese]->[Beef] confianza: 0.75    Descarto
 
-[B]->[C] confianza: 0.5    Descarto
+[Beef]->[Cheese] confianza: 0.75    Descarto
 
-[I]->[B] confianza: 0.5    Descarto
+[Chicken]->[Beef] confianza: 0.6    Descarto
 
-[B]->[I] confianza: 0.5    Descarto
+[Beef]->[Chicken] confianza: 0.75    Descarto
 
-[M]->[B] confianza: 0.57    Descarto
+[Clothes]->[Chicken] confianza: 1.0
 
-[B]->[M] confianza: 0.67    Descarto
+[Chicken]->[Clothes] confianza: 0.6    Descarto
 
-[I]->[C] confianza: 0.5    Descarto
+[Milk]->[Chicken] confianza: 1.0
 
-[C]->[I] confianza: 0.6    Descarto
+[Chicken]->[Milk] confianza: 0.8
 
-[O]->[C] confianza: 0.75
+[Milk]->[Clothes] confianza: 0.75    Descarto
 
-[C]->[O] confianza: 0.6    Descarto
+[Clothes]->[Milk] confianza: 1.0
 
-[L]->[I] confianza: 0.8
+[Clothes, Milk]->[Chicken] confianza: 1.0
 
-[I]->[L] confianza: 0.67    Descarto
+[Chicken, Milk]->[Clothes] confianza: 0.75    Descarto
 
-[M]->[I] confianza: 0.71
+[Chicken, Clothes]->[Milk] confianza: 1.0
 
-[I]->[M] confianza: 0.83
+[Milk]->[Chicken, Clothes] confianza: 0.75    Descarto
 
-[M]->[L] confianza: 0.71
+[Chicken]->[Clothes, Milk] confianza: 0.6    Descarto
 
-[L]->[M] confianza: 1.0
-
-[L, M]->[I] confianza: 0.8
-
-[I, M]->[L] confianza: 0.8
-
-[I, L]->[M] confianza: 1.0
-
-[M]->[I, L] confianza: 0.57    Descarto
-
-[I]->[L, M] confianza: 0.67    Descarto
-
-[L]->[I, M] confianza: 0.8
-
+[Clothes]->[Chicken, Milk] confianza: 1.0
